@@ -1,5 +1,6 @@
 import { Request, response, Response, Router} from 'express'
 import Autor from '../models/AutorSchema'
+
 class AutorRouter {
     router:Router;
     constructor(){
@@ -9,7 +10,7 @@ class AutorRouter {
 
     async getAutor(req:Request, res: Response): Promise<void> {
         const autors = await Autor.find();
-        res.json({status:200, autors})
+        res.json({status: 200, autors})
     }
 
     // async getAutorId(req:Request, res: Response): Promise<void> {
